@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+
+# FreeCAD
+*.FCStd.lock
+*.FCBak
+*.FCStd1
+autosave/
+
+# FEMM
+*.fem
+*.ans
+*.lua.out
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temp
+*.tmp
+*.temp
+*.log
