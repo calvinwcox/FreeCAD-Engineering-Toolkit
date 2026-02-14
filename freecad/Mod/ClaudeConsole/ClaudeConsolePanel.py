@@ -19,10 +19,10 @@ class TerminalWidget(QtWidgets.QWidget):
 
     def __init__(self, parent=None):
         super().__init__(parent)
-        self.setup_ui()
         self.process = None
         self.history = []
         self.history_index = 0
+        self.setup_ui()
 
     def setup_ui(self):
         layout = QtWidgets.QVBoxLayout(self)

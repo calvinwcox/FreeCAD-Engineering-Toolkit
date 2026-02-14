@@ -39,16 +39,22 @@ class ClaudeConsoleWorkbench(FreeCADGui.Workbench):
 
     def Initialize(self):
         """Initialize the workbench"""
-        from . import ClaudeConsolePanel
+        import ClaudeConsolePanel
+        import SolidWorksStyle
 
-        self.appendToolbar("Claude Console", ["ClaudeConsole_Toggle"])
-        self.appendMenu("Claude Console", ["ClaudeConsole_Toggle", "ClaudeConsole_Clear"])
+        self.appendToolbar("Claude Console", ["ClaudeConsole_Toggle", "ClaudeConsole_SolidWorksStyle"])
+        self.appendMenu("Claude Console", [
+            "ClaudeConsole_Toggle",
+            "ClaudeConsole_Clear",
+            "Separator",
+            "ClaudeConsole_SolidWorksStyle"
+        ])
 
         FreeCAD.Console.PrintMessage("Claude Console workbench initialized\n")
 
     def Activated(self):
         """Called when workbench is activated"""
-        from . import ClaudeConsolePanel
+        import ClaudeConsolePanel
         ClaudeConsolePanel.show_console()
         FreeCAD.Console.PrintMessage("Claude Console activated - press Ctrl+Shift+C to toggle\n")
 

@@ -39,7 +39,7 @@ class FEMMBridgeWorkbench(FreeCADGui.Workbench):
 
     def Initialize(self):
         """Initialize the workbench"""
-        from . import FEMMCommands
+        import FEMMCommands
 
         self.appendToolbar("FEMM Analysis", [
             "FEMM_NewMagnetic",

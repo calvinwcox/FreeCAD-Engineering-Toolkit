@@ -39,7 +39,7 @@ class EasyEDABridgeWorkbench(FreeCADGui.Workbench):
 
     def Initialize(self):
         """Initialize the workbench"""
-        from . import EasyEDACommands
+        import EasyEDACommands
 
         self.appendToolbar("EasyEDA", [
             "EasyEDA_Import",
